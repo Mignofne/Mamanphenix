@@ -1,0 +1,207 @@
+<html><head><base href="https://mamanphenix.fr/">
+<meta charset="UTF-8">
+<style>
+:root {
+  --terracotta: #E07A5F;
+  --beige: #F2D5BB;
+  --gold: #D4AF37;
+  --dark: #3D405B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: #FFF9F5;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(242, 213, 187, 0.2), rgba(242, 213, 187, 0.4));
+}
+
+.phoenix-svg {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+  fill: var(--terracotta);
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--terracotta);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.cta-button {
+  background: var(--terracotta);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonials {
+  background: var(--beige);
+  text-align: center;
+}
+
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--gold);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="hero">
+  <svg class="phoenix-svg floating" viewBox="0 0 100 100">
+    <!-- Stylized Phoenix SVG -->
+    <path d="M50 10 C20 40, 80 40, 50 90 M30 50 Q50 20 70 50 M40 60 Q50 40 60 60" stroke="var(--terracotta)" fill="none" stroke-width="3"/>
+  </svg>
+  <h1 class="title">Vous n'êtes pas seule.</h1>
+  <p class="subtitle">Maman Phénix est là pour écouter, soutenir et briser les tabous du post-partum.</p>
+  <a href="https://mamanphenix.fr/communaute" class="cta-button">Rejoindre une communauté bienveillante</a>
+</section>
+
+<section class="section">
+  <h2>Pourquoi Maman Phénix ?</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>Témoigner</h3>
+      <p>Partagez votre histoire pour inspirer et aider d'autres mamans à se sentir moins seules.</p>
+      <a href="https://mamanphenix.fr/temoignages" class="cta-button">Commencer une discussion</a>
+    </div>
+    <div class="feature-card">
+      <h3>Discuter</h3>
+      <p>Profitez de notre chat de soutien 24/7 pour échanger de manière anonyme et bienveillante.</p>
+      <a href="https://mamanphenix.fr/chat" class="cta-button">Participer à un groupe</a>
+    </div>
+    <div class="feature-card">
+      <h3>Découvrir</h3>
+      <p>Explorez nos ressources gratuites et trouvez des réponses concrètes à vos questions sur le post-partum.</p>
+      <a href="https://mamanphenix.fr/ressources" class="cta-button">Explorer les ressources</a>
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials">
+  <h2>Notre communauté</h2>
+  <p>Rejoignez plus de 1000 mamans qui s'entraident et se soutiennent chaque jour.</p>
+  <div class="social-links">
+    <a href="https://instagram.com/mamanphenix" class="cta-button">Instagram</a>
+    <a href="https://tiktok.com/@mamanphenix" class="cta-button">TikTok</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="quote">"Comme le phénix, chaque maman peut renaître plus forte."</p>
+  <nav>
+    <a href="https://mamanphenix.fr/temoigner">Témoigner</a> |
+    <a href="https://mamanphenix.fr/groupes">Participer à un groupe</a> |
+    <a href="https://mamanphenix.fr/ressources">Ressources gratuites</a> |
+    <a href="https://mamanphenix.fr/contact">Contact</a>
+  </nav>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Animation for feature cards on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  document.querySelectorAll('.feature-card').forEach((card) => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(20px)';
+    observer.observe(card);
+  });
+});
+</script>
+</body></html>k
